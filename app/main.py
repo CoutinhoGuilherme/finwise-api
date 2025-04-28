@@ -9,7 +9,7 @@ from .routers import auth, users, transactions
 user.Base.metadata.create_all(bind=engine)
 transaction.Base.metadata.create_all(bind=engine)
 
-app = FastAPI(title="Financial API", description="API for managing financial transactions")
+app = FastAPI(title="FinWise API", description="API for managing financial transactions")
 
 # Configuração do CORS
 app.add_middleware(
@@ -27,4 +27,4 @@ app.include_router(transactions.router)
 
 @app.get("/")
 def read_root():
-    return {"message": "Welcome to Financial API"}
+    return {"message": "Welcome to FinWise API"}

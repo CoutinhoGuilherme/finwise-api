@@ -1,4 +1,4 @@
-# Finance Tracker API
+# FinWise API
 
 API para gerenciamento financeiro, desenvolvida com FastAPI. Ela fornece recursos de login, cadastro, autenticação JWT, e gerenciamento de dados financeiros.
 
