@@ -8,7 +8,7 @@ from ..schemas import Token
 from ..utils.security import authenticate_user, create_access_token
 from ..config import settings
 
-router = APIRouter(tags=["authentication"])
+router = APIRouter(tags=["Authentication"])
 
 @router.post("/token", response_model=Token, summary="Gerar token de acesso", description="Este endpoint permite que um usuário se autentique fornecendo seu nome de usuário e senha. Em caso de sucesso, um token JWT é gerado e retornado para o usuário. O token é utilizado para autenticação nas rotas protegidas da API.", responses={
         200: {
