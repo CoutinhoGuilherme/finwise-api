@@ -28,3 +28,10 @@ app.include_router(transactions.router)
 @app.get("/")
 def read_root():
     return {"message": "Welcome to FinWise API"}
+
+if __name__ == "__main__":
+    import uvicorn
+    import os
+
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("app.main:app", host="0.0.0.0", port=port)
