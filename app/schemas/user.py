@@ -1,6 +1,7 @@
 from pydantic import BaseModel, EmailStr, constr, validator
 from typing import Optional
 from datetime import datetime
+import re
 
 class UserBase(BaseModel):
     name: str
