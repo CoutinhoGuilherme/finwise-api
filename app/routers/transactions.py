@@ -1,5 +1,4 @@
 from fastapi import APIRouter, Depends, HTTPException
-from sqlalchemy import false, null, true
 from sqlalchemy.orm import Session
 from typing import List
 
@@ -24,12 +23,12 @@ router = APIRouter(prefix="/transactions", tags=["Transactions"])
                             "description": "Compra no supermercado",
                             "type": "expense",
                             "date": "2025-04-28T12:00:00",
-                            "is_recurring": false,
+                            "is_recurring": False,
                             "category": "Alimentação",
-                            "end_date": null,
+                            "end_date": None,
                             "user_id": 1,
                             "created_at": "2025-04-28T12:00:00",
-                            "updated_at": null
+                            "updated_at": None
                         }
                     ]
                 }
@@ -68,12 +67,12 @@ def read_transactions(
                         "description": "Compra no supermercado",
                         "type": "expense",
                         "date": "2025-04-28T12:00:00",
-                        "is_recurring": false,
+                        "is_recurring": False,
                         "category": "Alimentação",
-                        "end_date": null,
+                        "end_date": None,
                         "user_id": 1,
                         "created_at": "2025-04-28T12:00:00",
-                        "updated_at": null
+                        "updated_at": None
                     }
                 }
             }
@@ -109,12 +108,12 @@ def create_transaction(
                         "description": "Compra no supermercado",
                         "type": "expense",
                         "date": "2025-04-28T12:00:00",
-                        "is_recurring": false,
+                        "is_recurring": False,
                         "category": "Alimentação",
-                        "end_date": null,
+                        "end_date": None,
                         "user_id": 1,
                         "created_at": "2025-04-28T12:00:00",
-                        "updated_at": null
+                        "updated_at": None
                     }
                 }
             }
@@ -165,7 +164,7 @@ def read_transaction(
                         "description": "Compra no supermercado (atualizado)",
                         "type": "expense",
                         "date": "2025-04-28T12:00:00",
-                        "is_recurring": true,
+                        "is_recurring": True,
                         "category": "Alimentação",
                         "end_date": "2025-06-01T00:00:00",
                         "user_id": 1,
@@ -222,12 +221,12 @@ def update_transaction(
                         "description": "Compra no supermercado",
                         "type": "expense",
                         "date": "2025-04-28T12:00:00",
-                        "is_recurring": false,
+                        "is_recurring": False,
                         "category": "Alimentação",
-                        "end_date": null,
+                        "end_date": None,
                         "user_id": 1,
                         "created_at": "2025-04-28T12:00:00",
-                        "updated_at": null
+                        "updated_at": None
                     }
                 }
             }
