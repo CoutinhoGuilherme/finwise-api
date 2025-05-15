@@ -21,8 +21,14 @@ router = APIRouter(prefix="/transactions", tags=["Transactions"])
                             "id": 1,
                             "amount": 100.00,
                             "description": "Compra no supermercado",
+                            "type": "expense",
                             "date": "2025-04-28T12:00:00",
-                            "user_id": 1
+                            "is_recurring": false,
+                            "category": "Alimentação",
+                            "end_date": null,
+                            "user_id": 1,
+                            "created_at": "2025-04-28T12:00:00",
+                            "updated_at": null
                         }
                     ]
                 }
@@ -59,8 +65,14 @@ def read_transactions(
                         "id": 1,
                         "amount": 100.00,
                         "description": "Compra no supermercado",
+                        "type": "expense",
                         "date": "2025-04-28T12:00:00",
-                        "user_id": 1
+                        "is_recurring": false,
+                        "category": "Alimentação",
+                        "end_date": null,
+                        "user_id": 1,
+                        "created_at": "2025-04-28T12:00:00",
+                        "updated_at": null
                     }
                 }
             }
@@ -94,8 +106,14 @@ def create_transaction(
                         "id": 1,
                         "amount": 100.00,
                         "description": "Compra no supermercado",
+                        "type": "expense",
                         "date": "2025-04-28T12:00:00",
-                        "user_id": 1
+                        "is_recurring": false,
+                        "category": "Alimentação",
+                        "end_date": null,
+                        "user_id": 1,
+                        "created_at": "2025-04-28T12:00:00",
+                        "updated_at": null
                     }
                 }
             }
@@ -144,8 +162,14 @@ def read_transaction(
                         "id": 1,
                         "amount": 150.00,
                         "description": "Compra no supermercado (atualizado)",
+                        "type": "expense",
                         "date": "2025-04-28T12:00:00",
-                        "user_id": 1
+                        "is_recurring": true,
+                        "category": "Alimentação",
+                        "end_date": "2025-06-01T00:00:00",
+                        "user_id": 1,
+                        "created_at": "2025-04-28T12:00:00",
+                        "updated_at": "2025-05-01T12:00:00"
                     }
                 }
             }
@@ -195,8 +219,14 @@ def update_transaction(
                         "id": 1,
                         "amount": 100.00,
                         "description": "Compra no supermercado",
+                        "type": "expense",
                         "date": "2025-04-28T12:00:00",
-                        "user_id": 1
+                        "is_recurring": false,
+                        "category": "Alimentação",
+                        "end_date": null,
+                        "user_id": 1,
+                        "created_at": "2025-04-28T12:00:00",
+                        "updated_at": null
                     }
                 }
             }
