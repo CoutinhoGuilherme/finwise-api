@@ -19,4 +19,5 @@ class Transaction(Base):
     updated_at = Column(DateTime(timezone=True), onupdate=func.now())
     
     # Relacionamento com o usuário
-    user = relationship("User", backref="transactions")
+    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"))
+    user = relationship("User", back_populates="transactions")
