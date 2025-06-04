@@ -27,7 +27,7 @@ class UserBase(BaseModel):
             raise ValueError('Last name must be between 2 and 50 characters')
         return value
     
-        @validator('birthday')
+    @validator('birthday')
     def birthday_must_be_past(cls, value):
         if value and value > date.today():
             raise ValueError('Birthday must be in the past')
