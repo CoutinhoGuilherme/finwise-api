@@ -93,13 +93,13 @@ def update_user_me(
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_active_user)
 ):
-    # Verifica se novo email já existe
     if user_update.email and user_update.email != current_user.email:
         db_user = user_crud.get_user_by_email(db, email=user_update.email)
         if db_user:
             raise HTTPException(status_code=400, detail="Email already registered")
     
     return user_crud.update_user(db, user_id=current_user.id, user=user_update)
+
 
 @router.delete("/me", response_model=User, summary="Deletar usuário logado",
     description="Remove permanentemente a conta do usuário autenticado.",
@@ -117,4 +117,4 @@ def delete_user_me(
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_active_user)
 ):
-    return user_crud.delete_user(db, user_id=current_user.id)    
+    return user_crud.delete_user(db, user_id=current_user.id)
