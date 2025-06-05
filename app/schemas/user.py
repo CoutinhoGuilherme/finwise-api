@@ -7,7 +7,7 @@ class UserBase(BaseModel):
     first_name: str
     last_name: str
     email: EmailStr
-    birthday: Optional[date] = None  # Novo campo
+    birthday: date
 
     # Validação para firstName
     @validator('first_name')
